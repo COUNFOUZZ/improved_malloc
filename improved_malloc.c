@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 00:41:38 by aabda             #+#    #+#             */
-/*   Updated: 2023/08/03 02:10:12 by aabda            ###   ########.fr       */
+/*   Updated: 2023/08/03 11:47:14 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,10 @@ static void	remove_and_place_node(t_malloc_lst **lst, t_malloc_lst *current)
 	else if (tmp_l && !tmp_r)
 		tmp_l->next = NULL;
 	else if (!tmp_l && tmp_r)
+	{
+		tmp_r->prev = NULL;
 		*lst = tmp_r;
+	}
 	free(current->address);
 	current->address = NULL;
 	free(current);
