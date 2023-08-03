@@ -16,11 +16,11 @@ git clone https://github.com/counfouzz/improved_malloc.git
 cd improved_malloc
 ```
 
-2. Create a file main.c
+2. Create a file main.c:
 ```bash
 touch main.c
 ```
-3. In main.c, copy and paste the code bellow
+3. In main.c, copy and paste the code bellow:
 ```c
 #include "./improved_malloc.h"
 #include <stdio.h>
@@ -69,7 +69,7 @@ int	main(void)
 
 	// Free the memory block associated with pointer str from the linked list
 	lst_free_bloc(&lst, str);
-	printf("\n");
+	printf("\n\n");
 	// Print the linked list after freeing the block
 	ft_print_linked_list_and_str(lst);
 	return (0);
@@ -77,7 +77,7 @@ int	main(void)
 
 ```
 
-4. Compile the improved_malloc.c file:
+4. Compile all files:
 ```bash
 gcc improved_malloc.c main.c -o improved_malloc
 ```
