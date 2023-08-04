@@ -54,9 +54,8 @@ void	*improved_malloc(t_malloc_lst **lst, size_t len)
 	void	*elem;
 
 	elem = malloc(len);
-	if (!elem)
-		return (NULL);
-	lst_create_node(lst, elem);
+	if (elem)
+		lst_create_node(lst, elem);
 	return (elem);
 }
 
